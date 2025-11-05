@@ -167,7 +167,12 @@ function factorial(n) {
  */
 function sumaHastaN(n) {
   // TODO: Usa un bucle para sumar todos los nÃºmeros desde 1 hasta n
-  return 0;
+  resultadoSumaHastaN = 0
+    for(i = 1; i <= n; i++) {
+      resultadoSumaHastaN = resultadoSumaHastaN + i
+    }
+
+  return resultadoSumaHastaN
 }
 
 /**
