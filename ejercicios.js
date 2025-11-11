@@ -1,293 +1,613 @@
-// FUNDAMENTOS DE PROGRAMACIÃ“N - PRÃCTICA
-// Nombre del estudiante: _________________
-// Fecha: _________________
+// ===========================================================
+// FUNDAMENTOS DE PROGRAMACIÓN - PRÁCTICA FINAL
+// Estudiante: Gael
+// Fecha: 11/11/2025
+// ===========================================================
+//
+// Este archivo contiene la solución completa de todos los ejercicios
+// de la práctica integradora en JavaScript. Cada función está
+// documentada siguiendo el formato guía educativa:
+//
+//  - QUÉ hace la función
+//  - CÓMO usarla correctamente
+//  - QUÉ parámetros recibe
+//  - QUÉ retorna
+//  - POR QUÉ se tomaron ciertas decisiones
+//
+// ===========================================================
+
 
 // ============================================
-// SECCIÃ“N 1: VARIABLES Y TIPOS DE DATOS (10 puntos)
+// SECCIÓN 1: VARIABLES Y TIPOS DE DATOS
 // ============================================
 
-/**
- * Ejercicio 1.1: Declarar variables (2 puntos)
- * Crea tres variables con tu informaciÃ³n personal
- * @returns {Object} - Objeto con nombre, edad y carrera
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: miInformacion
+------------------------------------------------------------
+QUÉ HACE:
+  Crea y devuelve un objeto con la información personal del estudiante.
+
+CÓMO USARLA:
+  Simplemente se llama sin argumentos: miInformacion()
+
+QUÉ PARÁMETROS RECIBE:
+  Ninguno.
+
+QUÉ RETORNA:
+  Un objeto con las propiedades: nombre, edad y carrera.
+
+POR QUÉ:
+  Se usa para practicar la declaración de variables y el retorno
+  de objetos en JavaScript.
+*/
 function miInformacion() {
-  // TODO: Declara las variables nombre, edad y carrera
-  // Ejemplo: const nombre = "Juan";
-  
   const nombre = "Gael";
   const edad = 19;
-  const carrera = "TSU";
-  
+  const carrera = "TSU en Desarrollo e Innovación de Software";
   return { nombre, edad, carrera };
 }
 
-/**
- * Ejercicio 1.2: Operaciones aritmÃ©ticas bÃ¡sicas (3 puntos)
- * @param {number} a - Primer nÃºmero
- * @param {number} b - Segundo nÃºmero
- * @returns {Object} - Objeto con suma, resta, multiplicaciÃ³n y divisiÃ³n
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: operacionesBasicas
+------------------------------------------------------------
+QUÉ HACE:
+  Calcula las operaciones aritméticas básicas entre dos números.
+
+CÓMO USARLA:
+  operacionesBasicas(10, 5)
+
+QUÉ PARÁMETROS RECIBE:
+  a: primer número
+  b: segundo número
+
+QUÉ RETORNA:
+  Un objeto con las propiedades: suma, resta, multiplicacion, division.
+
+POR QUÉ:
+  Permite aplicar operadores aritméticos y practicar estructuras básicas
+  de retorno de objetos.
+*/
 function operacionesBasicas(a, b) {
-  // TODO: Calcula suma, resta, multiplicaciÃ³n y divisiÃ³n de a y b
-  
-  const suma = 0;
-  const resta = 0;
-  const multiplicacion = 0;
-  const division = 0;
-  
+  const suma = a + b;
+  const resta = a - b;
+  const multiplicacion = a * b;
+  const division = b !== 0 ? a / b : null; // Evita división entre cero
   return { suma, resta, multiplicacion, division };
 }
 
-/**
- * Ejercicio 1.3: Ãrea de un rectÃ¡ngulo (2 puntos)
- * @param {number} base - Base del rectÃ¡ngulo
- * @param {number} altura - Altura del rectÃ¡ngulo
- * @returns {number} - Ãrea del rectÃ¡ngulo
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: areaRectangulo
+------------------------------------------------------------
+QUÉ HACE:
+  Calcula el área de un rectángulo.
+
+CÓMO USARLA:
+  areaRectangulo(5, 10)
+
+QUÉ PARÁMETROS RECIBE:
+  base: base del rectángulo
+  altura: altura del rectángulo
+
+QUÉ RETORNA:
+  El área (base * altura)
+
+POR QUÉ:
+  Reafirma el uso de operadores y funciones simples.
+*/
 function areaRectangulo(base, altura) {
-  // TODO: Calcula y retorna el Ã¡rea (base * altura)
-  return 0;
+  return base * altura;
 }
 
-/**
- * Ejercicio 1.4: ConversiÃ³n de temperatura (3 puntos)
- * Convierte grados Celsius a Fahrenheit
- * FÃ³rmula: F = C * 9/5 + 32
- * @param {number} celsius - Temperatura en Celsius
- * @returns {number} - Temperatura en Fahrenheit
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: celsiusAFahrenheit
+------------------------------------------------------------
+QUÉ HACE:
+  Convierte una temperatura de grados Celsius a Fahrenheit.
+
+CÓMO USARLA:
+  celsiusAFahrenheit(0) → 32
+
+QUÉ PARÁMETROS RECIBE:
+  celsius: número en grados Celsius.
+
+QUÉ RETORNA:
+  Temperatura equivalente en Fahrenheit.
+
+POR QUÉ:
+  Permite aplicar fórmulas matemáticas básicas en código.
+*/
 function celsiusAFahrenheit(celsius) {
-  // TODO: Implementa la conversiÃ³n
-  return 0;
+  return celsius * 9 / 5 + 32;
 }
 
+
 // ============================================
-// SECCIÃ“N 2: CONDICIONALES (15 puntos)
+// SECCIÓN 2: CONDICIONALES
 // ============================================
 
-/**
- * Ejercicio 2.1: NÃºmero par o impar (3 puntos)
- * @param {number} numero - NÃºmero a evaluar
- * @returns {string} - "par" o "impar"
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: parOImpar
+------------------------------------------------------------
+QUÉ HACE:
+  Determina si un número es par o impar.
+
+CÓMO USARLA:
+  parOImpar(4) → "par"
+
+QUÉ PARÁMETROS RECIBE:
+  numero: entero positivo o negativo.
+
+QUÉ RETORNA:
+  "par" o "impar"
+
+POR QUÉ:
+  Refuerza el uso del operador módulo (%) y condicionales.
+*/
 function parOImpar(numero) {
-  // TODO: Usa el operador % (mÃ³dulo) para determinar si es par o impar
-  // Pista: Un nÃºmero es par si numero % 2 === 0
-  return "";
+  return numero % 2 === 0 ? "par" : "impar";
 }
 
-/**
- * Ejercicio 2.2: CalificaciÃ³n (4 puntos)
- * @param {number} nota - Nota del 0 al 100
- * @returns {string} - "Aprobado" si nota >= 60, "Reprobado" si no
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: evaluarNota
+------------------------------------------------------------
+QUÉ HACE:
+  Evalúa si una nota numérica es aprobatoria o reprobatoria.
+
+CÓMO USARLA:
+  evaluarNota(75) → "Aprobado"
+
+QUÉ PARÁMETROS RECIBE:
+  nota: número del 0 al 100
+
+QUÉ RETORNA:
+  "Aprobado" o "Reprobado"
+
+POR QUÉ:
+  Se usa una estructura if/else para representar decisiones simples.
+*/
 function evaluarNota(nota) {
-  // TODO: Implementa la lÃ³gica con if/else
-  return "";
+  return nota >= 60 ? "Aprobado" : "Reprobado";
 }
 
-/**
- * Ejercicio 2.3: El mayor de tres nÃºmeros (4 puntos)
- * @param {number} a - Primer nÃºmero
- * @param {number} b - Segundo nÃºmero
- * @param {number} c - Tercer nÃºmero
- * @returns {number} - El nÃºmero mayor
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: mayorDeTres
+------------------------------------------------------------
+QUÉ HACE:
+  Devuelve el número mayor entre tres valores.
+
+CÓMO USARLA:
+  mayorDeTres(5, 9, 3) → 9
+
+QUÉ PARÁMETROS RECIBE:
+  a, b, c: tres números.
+
+QUÉ RETORNA:
+  El número mayor.
+
+POR QUÉ:
+  Practica el uso de Math.max() y comparaciones lógicas.
+*/
 function mayorDeTres(a, b, c) {
-  // TODO: Encuentra y retorna el mayor de los tres nÃºmeros
-  return 0;
+  return Math.max(a, b, c);
 }
 
-/**
- * Ejercicio 2.4: ClasificaciÃ³n de edad (4 puntos)
- * @param {number} edad - Edad de la persona
- * @returns {string} - "menor" (0-17), "adulto" (18-64), "mayor" (65+)
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: clasificarEdad
+------------------------------------------------------------
+QUÉ HACE:
+  Clasifica una edad en tres categorías: menor, adulto o mayor.
+
+CÓMO USARLA:
+  clasificarEdad(20) → "adulto"
+
+QUÉ PARÁMETROS RECIBE:
+  edad: número entero.
+
+QUÉ RETORNA:
+  "menor", "adulto" o "mayor".
+
+POR QUÉ:
+  Refuerza el uso de condicionales múltiples con if/else if/else.
+*/
 function clasificarEdad(edad) {
-  // TODO: Implementa la clasificaciÃ³n con if/else if/else
-  return "";
+  if (edad < 18) return "menor";
+  else if (edad <= 64) return "adulto";
+  else return "mayor";
 }
 
+
 // ============================================
-// SECCIÃ“N 3: FUNCIONES Y BUCLES (20 puntos)
+// SECCIÓN 3: FUNCIONES Y BUCLES
 // ============================================
 
-/**
- * Ejercicio 3.1: Factorial (5 puntos)
- * Calcula el factorial de un nÃºmero (n! = n * (n-1) * (n-2) * ... * 1)
- * Ejemplo: factorial(5) = 5 * 4 * 3 * 2 * 1 = 120
- * @param {number} n - NÃºmero entero positivo
- * @returns {number} - Factorial de n
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: factorial
+------------------------------------------------------------
+QUÉ HACE:
+  Calcula el factorial de un número (n! = n * (n-1) * ... * 1)
+
+CÓMO USARLA:
+  factorial(5) → 120
+
+QUÉ PARÁMETROS RECIBE:
+  n: número entero positivo.
+
+QUÉ RETORNA:
+  Factorial del número.
+
+POR QUÉ:
+  Practica el uso de bucles y casos base simples.
+*/
 function factorial(n) {
-  // TODO: Implementa usando un bucle for
-  return 1;
+  if (n === 0) return 1;
+  let resultado = 1;
+  for (let i = 1; i <= n; i++) {
+    resultado *= i;
+  }
+  return resultado;
 }
 
-/**
- * Ejercicio 3.2: Suma de nÃºmeros del 1 al n (4 puntos)
- * @param {number} n - NÃºmero lÃ­mite
- * @returns {number} - Suma de 1 + 2 + 3 + ... + n
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: sumaHastaN
+------------------------------------------------------------
+QUÉ HACE:
+  Calcula la suma de todos los números del 1 al n.
+
+CÓMO USARLA:
+  sumaHastaN(5) → 15
+
+QUÉ PARÁMETROS RECIBE:
+  n: número entero positivo.
+
+QUÉ RETORNA:
+  La suma total.
+
+POR QUÉ:
+  Refuerza el uso de bucles acumuladores.
+*/
 function sumaHastaN(n) {
-  // TODO: Usa un bucle para sumar todos los nÃºmeros desde 1 hasta n
-  return 0;
+  let suma = 0;
+  for (let i = 1; i <= n; i++) {
+    suma += i;
+  }
+  return suma;
 }
 
-/**
- * Ejercicio 3.3: Tabla de multiplicar (5 puntos)
- * @param {number} numero - NÃºmero para generar su tabla
- * @returns {Array} - Array con los resultados de numero x 1 hasta numero x 10
- * Ejemplo: tablaMultiplicar(3) debe retornar [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: tablaMultiplicar
+------------------------------------------------------------
+QUÉ HACE:
+  Genera la tabla de multiplicar de un número del 1 al 10.
+
+CÓMO USARLA:
+  tablaMultiplicar(3) → [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
+
+QUÉ PARÁMETROS RECIBE:
+  numero: número entero.
+
+QUÉ RETORNA:
+  Un array con los resultados.
+
+POR QUÉ:
+  Refuerza el uso de bucles for y arreglos.
+*/
 function tablaMultiplicar(numero) {
-  // TODO: Genera un array con la tabla de multiplicar
   const tabla = [];
+  for (let i = 1; i <= 10; i++) {
+    tabla.push(numero * i);
+  }
   return tabla;
 }
 
-/**
- * Ejercicio 3.4: NÃºmeros pares hasta n (6 puntos)
- * @param {number} n - NÃºmero lÃ­mite
- * @returns {Array} - Array con todos los nÃºmeros pares desde 2 hasta n
- * Ejemplo: numerosPares(10) debe retornar [2, 4, 6, 8, 10]
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: numerosPares
+------------------------------------------------------------
+QUÉ HACE:
+  Devuelve todos los números pares hasta n.
+
+CÓMO USARLA:
+  numerosPares(10) → [2, 4, 6, 8, 10]
+
+QUÉ PARÁMETROS RECIBE:
+  n: número entero.
+
+QUÉ RETORNA:
+  Array con números pares.
+
+POR QUÉ:
+  Refuerza el uso de bucles con incrementos personalizados.
+*/
 function numerosPares(n) {
-  // TODO: Crea un array con todos los nÃºmeros pares hasta n
   const pares = [];
+  for (let i = 2; i <= n; i += 2) {
+    pares.push(i);
+  }
   return pares;
 }
 
+
 // ============================================
-// SECCIÃ“N 4: ARRAYS (25 puntos)
+// SECCIÓN 4: ARRAYS
 // ============================================
 
-/**
- * Ejercicio 4.1: Suma de elementos de un array (4 puntos)
- * @param {Array<number>} numeros - Array de nÃºmeros
- * @returns {number} - Suma de todos los elementos
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: sumaArray
+------------------------------------------------------------
+QUÉ HACE:
+  Calcula la suma de todos los elementos de un array numérico.
+
+CÓMO USARLA:
+  sumaArray([1, 2, 3]) → 6
+
+QUÉ PARÁMETROS RECIBE:
+  numeros: array de números.
+
+QUÉ RETORNA:
+  Suma total de los valores.
+
+POR QUÉ:
+  Introduce el método .reduce() para operaciones acumulativas.
+*/
 function sumaArray(numeros) {
-  // TODO: Suma todos los elementos del array
-  return 0;
+  return numeros.reduce((total, n) => total + n, 0);
 }
 
-/**
- * Ejercicio 4.2: Promedio de un array (5 puntos)
- * @param {Array<number>} numeros - Array de nÃºmeros
- * @returns {number} - Promedio de los nÃºmeros
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: promedioArray
+------------------------------------------------------------
+QUÉ HACE:
+  Calcula el promedio de los números dentro de un array.
+
+CÓMO USARLA:
+  promedioArray([2, 4, 6]) → 4
+
+QUÉ PARÁMETROS RECIBE:
+  numeros: array de números.
+
+QUÉ RETORNA:
+  Promedio numérico.
+
+POR QUÉ:
+  Refuerza el concepto de promedio como suma / cantidad.
+*/
 function promedioArray(numeros) {
-  // TODO: Calcula el promedio (suma total / cantidad de elementos)
-  return 0;
+  if (numeros.length === 0) return 0;
+  return sumaArray(numeros) / numeros.length;
 }
 
-/**
- * Ejercicio 4.3: Encontrar el mÃ¡ximo (6 puntos)
- * @param {Array<number>} numeros - Array de nÃºmeros
- * @returns {number} - El nÃºmero mÃ¡s grande del array
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: encontrarMaximo
+------------------------------------------------------------
+QUÉ HACE:
+  Encuentra el número más grande dentro de un array.
+
+CÓMO USARLA:
+  encontrarMaximo([1, 8, 4]) → 8
+
+QUÉ PARÁMETROS RECIBE:
+  numeros: array de números.
+
+QUÉ RETORNA:
+  Valor máximo del array.
+
+POR QUÉ:
+  Muestra el uso de Math.max y el operador spread (...).
+*/
 function encontrarMaximo(numeros) {
-  // TODO: Encuentra y retorna el nÃºmero mÃ¡s grande
-  // Pista: Puedes usar Math.max(...numeros) o hacerlo con un bucle
-  return 0;
+  return Math.max(...numeros);
 }
 
-/**
- * Ejercicio 4.4: Filtrar nÃºmeros mayores a un valor (5 puntos)
- * @param {Array<number>} numeros - Array de nÃºmeros
- * @param {number} limite - Valor lÃ­mite
- * @returns {Array<number>} - Nuevo array solo con nÃºmeros mayores al lÃ­mite
- * Ejemplo: filtrarMayores([1, 5, 3, 8, 2], 4) debe retornar [5, 8]
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: filtrarMayores
+------------------------------------------------------------
+QUÉ HACE:
+  Filtra los números mayores a un valor límite.
+
+CÓMO USARLA:
+  filtrarMayores([1, 5, 8, 3], 4) → [5, 8]
+
+QUÉ PARÁMETROS RECIBE:
+  numeros: array de números.
+  limite: valor mínimo.
+
+QUÉ RETORNA:
+  Array con números mayores al límite.
+
+POR QUÉ:
+  Practica el método .filter() de los arrays.
+*/
 function filtrarMayores(numeros, limite) {
-  // TODO: Crea un nuevo array con solo los nÃºmeros mayores al lÃ­mite
-  const mayores = [];
-  return mayores;
+  return numeros.filter(num => num > limite);
 }
 
-/**
- * Ejercicio 4.5: Invertir un array (5 puntos)
- * @param {Array} arr - Array a invertir
- * @returns {Array} - Nuevo array con los elementos en orden inverso
- * Ejemplo: invertirArray([1, 2, 3, 4]) debe retornar [4, 3, 2, 1]
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: invertirArray
+------------------------------------------------------------
+QUÉ HACE:
+  Devuelve un nuevo array con los elementos invertidos.
+
+CÓMO USARLA:
+  invertirArray([1, 2, 3]) → [3, 2, 1]
+
+QUÉ PARÁMETROS RECIBE:
+  arr: array de cualquier tipo.
+
+QUÉ RETORNA:
+  Nuevo array invertido.
+
+POR QUÉ:
+  Practica el uso del método .reverse() y el operador spread.
+*/
 function invertirArray(arr) {
-  // TODO: Invierte el orden de los elementos
-  // Pista: Puedes usar arr.reverse() o hacerlo manualmente
-  const invertido = [];
-  return invertido;
+  return [...arr].reverse();
 }
 
+
 // ============================================
-// SECCIÃ“N 5: ARRAYS BIDIMENSIONALES (30 puntos)
-// PreparaciÃ³n para matrices
+// SECCIÓN 5: MATRICES (ARRAYS BIDIMENSIONALES)
 // ============================================
 
-/**
- * Ejercicio 5.1: Crear una matriz (6 puntos)
- * Crea una matriz de filas x columnas llena de ceros
- * @param {number} filas - NÃºmero de filas
- * @param {number} columnas - NÃºmero de columnas
- * @returns {Array<Array<number>>} - Matriz de ceros
- * Ejemplo: crearMatriz(2, 3) debe retornar [[0, 0, 0], [0, 0, 0]]
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: crearMatriz
+------------------------------------------------------------
+QUÉ HACE:
+  Crea una matriz (array de arrays) llena de ceros.
+
+CÓMO USARLA:
+  crearMatriz(2, 3) → [[0,0,0],[0,0,0]]
+
+QUÉ PARÁMETROS RECIBE:
+  filas: número de filas.
+  columnas: número de columnas.
+
+QUÉ RETORNA:
+  Matriz de ceros.
+
+POR QUÉ:
+  Introduce el concepto de arrays bidimensionales.
+*/
 function crearMatriz(filas, columnas) {
-  // TODO: Crea una matriz de filas x columnas llena de ceros
   const matriz = [];
+  for (let i = 0; i < filas; i++) {
+    const fila = new Array(columnas).fill(0);
+    matriz.push(fila);
+  }
   return matriz;
 }
 
-/**
- * Ejercicio 5.2: Suma de elementos de una matriz (6 puntos)
- * @param {Array<Array<number>>} matriz - Matriz de nÃºmeros
- * @returns {number} - Suma de todos los elementos
- * Ejemplo: sumaMatriz([[1, 2], [3, 4]]) debe retornar 10
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: sumaMatriz
+------------------------------------------------------------
+QUÉ HACE:
+  Suma todos los elementos de una matriz.
+
+CÓMO USARLA:
+  sumaMatriz([[1,2],[3,4]]) → 10
+
+QUÉ PARÁMETROS RECIBE:
+  matriz: array bidimensional de números.
+
+QUÉ RETORNA:
+  Suma total.
+
+POR QUÉ:
+  Refuerza el uso de bucles anidados.
+*/
 function sumaMatriz(matriz) {
-  // TODO: Suma todos los elementos de la matriz
-  // NecesitarÃ¡s dos bucles: uno para las filas y otro para las columnas
-  return 0;
+  let suma = 0;
+  for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+      suma += matriz[i][j];
+    }
+  }
+  return suma;
 }
 
-/**
- * Ejercicio 5.3: Obtener una fila (5 puntos)
- * @param {Array<Array<number>>} matriz - Matriz
- * @param {number} indiceFila - Ãndice de la fila (empezando en 0)
- * @returns {Array<number>} - La fila especificada
- * Ejemplo: obtenerFila([[1, 2], [3, 4], [5, 6]], 1) debe retornar [3, 4]
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: obtenerFila
+------------------------------------------------------------
+QUÉ HACE:
+  Devuelve una fila específica de la matriz.
+
+CÓMO USARLA:
+  obtenerFila([[1,2],[3,4]], 1) → [3,4]
+
+QUÉ PARÁMETROS RECIBE:
+  matriz: array bidimensional.
+  indiceFila: índice de fila (empezando en 0).
+
+QUÉ RETORNA:
+  Array con los valores de la fila seleccionada.
+
+POR QUÉ:
+  Permite acceder directamente a una subestructura del array.
+*/
 function obtenerFila(matriz, indiceFila) {
-  // TODO: Retorna la fila indicada
-  return [];
+  return matriz[indiceFila];
 }
 
-/**
- * Ejercicio 5.4: Obtener una columna (7 puntos)
- * @param {Array<Array<number>>} matriz - Matriz
- * @param {number} indiceColumna - Ãndice de la columna (empezando en 0)
- * @returns {Array<number>} - Array con los elementos de la columna
- * Ejemplo: obtenerColumna([[1, 2], [3, 4], [5, 6]], 0) debe retornar [1, 3, 5]
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: obtenerColumna
+------------------------------------------------------------
+QUÉ HACE:
+  Devuelve todos los valores de una columna específica.
+
+CÓMO USARLA:
+  obtenerColumna([[1,2],[3,4],[5,6]], 0) → [1,3,5]
+
+QUÉ PARÁMETROS RECIBE:
+  matriz: array bidimensional.
+  indiceColumna: índice de columna (empezando en 0).
+
+QUÉ RETORNA:
+  Array con los elementos de la columna.
+
+POR QUÉ:
+  Enseña a recorrer estructuras bidimensionales.
+*/
 function obtenerColumna(matriz, indiceColumna) {
-  // TODO: Extrae todos los elementos de la columna indicada
   const columna = [];
+  for (let i = 0; i < matriz.length; i++) {
+    columna.push(matriz[i][indiceColumna]);
+  }
   return columna;
 }
 
-/**
- * Ejercicio 5.5: Transponer una matriz (6 puntos)
- * La transpuesta intercambia filas por columnas
- * @param {Array<Array<number>>} matriz - Matriz original
- * @returns {Array<Array<number>>} - Matriz transpuesta
- * Ejemplo: transponer([[1, 2, 3], [4, 5, 6]]) debe retornar [[1, 4], [2, 5], [3, 6]]
- */
+/*
+------------------------------------------------------------
+FUNCIÓN: transponer
+------------------------------------------------------------
+QUÉ HACE:
+  Intercambia filas por columnas en una matriz (transpuesta).
+
+CÓMO USARLA:
+  transponer([[1,2,3],[4,5,6]]) → [[1,4],[2,5],[3,6]]
+
+QUÉ PARÁMETROS RECIBE:
+  matriz: array bidimensional.
+
+QUÉ RETORNA:
+  Nueva matriz transpuesta.
+
+POR QUÉ:
+  Es una operación fundamental para álgebra y manipulación matricial.
+*/
 function transponer(matriz) {
-  // TODO: Crea la matriz transpuesta
+  const filas = matriz.length;
+  const columnas = matriz[0].length;
   const transpuesta = [];
+
+  for (let j = 0; j < columnas; j++) {
+    const nuevaFila = [];
+    for (let i = 0; i < filas; i++) {
+      nuevaFila.push(matriz[i][j]);
+    }
+    transpuesta.push(nuevaFila);
+  }
   return transpuesta;
 }
+
 
 // ============================================
 // NO MODIFIQUES ESTA LÃNEA - NECESARIA PARA LOS TESTS
