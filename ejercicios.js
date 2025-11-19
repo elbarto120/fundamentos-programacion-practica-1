@@ -6,7 +6,7 @@
 //
 // Este archivo contiene la solución completa de todos los ejercicios
 // de la práctica integradora en JavaScript. Cada función está
-// documentada siguiendo el formato guía educativa:
+// documentada siguiendo el formato guía educativa
 //
 //  - QUÉ hace la función
 //  - CÓMO usarla correctamente
