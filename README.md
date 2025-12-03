@@ -6,31 +6,30 @@ Fecha: 11 de noviembre de 2025
 
 Documentar y resolver ejercicios sobre clasificación y operaciones con matrices, usando formato Markdown compatible con GitHub.
 
-📂 Ejercicios Realizados
 🧮 Ejercicio 1: Clasificar matrices
 Matrices dadas:
 
-A:
+A
 
-1  0
-0  1
+1   0
+0   1
 
 
-B:
+B
 
 3   0   0
 0  -2   0
 0   0   5
 
 
-C:
+C
 
 2   1   4
 1   3   5
 4   5   6
 
 
-D:
+D
 
 1   2   3
 0   4   5
@@ -50,13 +49,13 @@ D: Matriz triangular superior.
 
 Matrices:
 
-A:
+A
 
 2  -1
 3   4
 
 
-B:
+B
 
 5   2
 -1  3
@@ -91,25 +90,17 @@ e) Aᵀ
 -1  4
 
 🔗 Ejercicio 3: Multiplicación en cadena
-
-Matrices:
-
 A
-
-1  2
-3  4
-
+1   2
+3   4
 
 B
-
-2  0
-1  3
-
+2   0
+1   3
 
 C
-
-1  1
-0  2
+1   1
+0   2
 
 1. AB
  4   6
@@ -132,7 +123,7 @@ C
 
 ✅ Conclusión General
 
-Se aplicaron los conceptos fundamentales de clasificación, operaciones y propiedades de matrices, verificando la correcta aplicación de las leyes algebraicas.
-El formato Markdown utilizado es completamente compatible con GitHub, permitiendo una presentación clara y ordenada.
+Se aplicaron los conceptos fundamentales de clasificación, operaciones y propiedades de matrices.
+Este formato es totalmente compatible con GitHub y mantiene las matrices alineadas correctamente.
 
 Autor: Gael Magaña Chan
