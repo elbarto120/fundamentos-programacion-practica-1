@@ -1,223 +1,138 @@
-# Álgebra Lineal — Ejercicios de Matrices  
-**Fecha:** 11 de noviembre de 2025  
+Álgebra Lineal — Ejercicios de Matrices
 
-## 📘 Objetivo de la Documentación  
-El objetivo de este documento es **documentar las soluciones y procedimientos** de los ejercicios sobre **clasificación y operaciones con matrices**, aplicando los conocimientos vistos en clase.  
-Además, se utiliza el formato **Markdown** para practicar la documentación técnica y la organización de información en un repositorio.
+Fecha: 11 de noviembre de 2025
 
----
+📘 Objetivo
 
-## 📂 Ejercicios Realizados
+Documentar y resolver ejercicios sobre clasificación y operaciones con matrices, usando formato Markdown compatible con GitHub.
 
-### 🧮 Ejercicio 1: Clasificar matrices
+📂 Ejercicios Realizados
+🧮 Ejercicio 1: Clasificar matrices
+Matrices dadas:
 
-**Enunciado del problema:**  
-Identificar el tipo de cada matriz dada:
+A:
 
-\[
-A = \begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}, \quad
-B = \begin{pmatrix}3 & 0 & 0 \\ 0 & -2 & 0 \\ 0 & 0 & 5\end{pmatrix}, \quad
-C = \begin{pmatrix}2 & 1 & 4 \\ 1 & 3 & 5 \\ 4 & 5 & 6\end{pmatrix}, \quad
-D = \begin{pmatrix}1 & 2 & 3 \\ 0 & 4 & 5 \\ 0 & 0 & 6\end{pmatrix}
-\]
+1  0
+0  1
 
-**Solución:**
-- **Matriz A:** Matriz identidad (cuadrada, diagonal, simétrica).  
-- **Matriz B:** Matriz diagonal (solo tiene valores en la diagonal principal).  
-- **Matriz C:** Matriz simétrica (C = Cᵀ).  
-- **Matriz D:** Matriz triangular superior (todos los elementos debajo de la diagonal son cero).
 
-**Procedimiento:**
-1. Se observa la forma y disposición de los elementos.  
-2. Si todos los elementos fuera de la diagonal son cero → matriz diagonal.  
-3. Si los valores se reflejan respecto a la diagonal → matriz simétrica.  
-4. Si los valores debajo de la diagonal son cero → matriz triangular superior.  
-5. Si es diagonal con unos → matriz identidad.
+B:
 
----
+3   0   0
+0  -2   0
+0   0   5
 
-### 🔢 Ejercicio 2: Operaciones básicas
 
-**Enunciado del problema:**  
-Dadas las matrices:
+C:
 
-\[
-A = \begin{pmatrix}2 & -1 \\ 3 & 4\end{pmatrix}, \quad
-B = \begin{pmatrix}5 & 2 \\ -1 & 3\end{pmatrix}
-\]
+2   1   4
+1   3   5
+4   5   6
 
-Calcular:
-a) A + B  
-b) 2A − B  
-c) AB  
-d) BA  
+
+D:
+
+1   2   3
+0   4   5
+0   0   6
+
+Clasificación:
+
+A: Matriz identidad.
+
+B: Matriz diagonal.
+
+C: Matriz simétrica.
+
+D: Matriz triangular superior.
+
+🔢 Ejercicio 2: Operaciones básicas
+
+Matrices:
+
+A:
+
+2  -1
+3   4
+
+
+B:
+
+5   2
+-1  3
+
+a) A + B
+7   1
+2   7
+
+b) 2A – B
+
+2A
+
+4  -2
+6   8
+
+
+2A – B
+
+-1  -4
+ 7   5
+
+c) AB
+11   1
+11  18
+
+d) BA
+16   3
+ 7  13
+
 e) Aᵀ
+2   3
+-1  4
 
----
+🔗 Ejercicio 3: Multiplicación en cadena
 
-**Soluciones:**
+Matrices:
 
-a) **A + B**
+A
 
-\[
-A + B = 
-\begin{pmatrix}2+5 & -1+2 \\ 3+(-1) & 4+3\end{pmatrix} =
-\begin{pmatrix}7 & 1 \\ 2 & 7\end{pmatrix}
-\]
+1  2
+3  4
 
----
 
-b) **2A − B**
+B
 
-\[
-2A = \begin{pmatrix}4 & -2 \\ 6 & 8\end{pmatrix}, \quad
-2A - B = 
-\begin{pmatrix}4-5 & -2-2 \\ 6-(-1) & 8-3\end{pmatrix} =
-\begin{pmatrix}-1 & -4 \\ 7 & 5\end{pmatrix}
-\]
+2  0
+1  3
 
----
 
-c) **AB**
+C
 
-\[
-AB = 
-\begin{pmatrix}
-2(5) + (-1)(-1) & 2(2) + (-1)(3) \\
-3(5) + 4(-1) & 3(2) + 4(3)
-\end{pmatrix} =
-\begin{pmatrix}
-11 & 1 \\ 11 & 18
-\end{pmatrix}
-\]
+1  1
+0  2
 
----
+1. AB
+ 4   6
+10  12
 
-d) **BA**
+2. (AB)C
+ 4  16
+10  34
 
-\[
-BA =
-\begin{pmatrix}
-5(2) + 2(3) & 5(-1) + 2(4) \\
--1(2) + 3(3) & -1(-1) + 3(4)
-\end{pmatrix} =
-\begin{pmatrix}
-16 & 3 \\ 7 & 13
-\end{pmatrix}
-\]
+3. BC
+2   2
+1   7
 
----
+4. A(BC)
+ 4  16
+10  34
 
-e) **Aᵀ (Transpuesta de A)**
 
-\[
-Aᵀ = 
-\begin{pmatrix}
-2 & 3 \\ -1 & 4
-\end{pmatrix}
-\]
+✔ Se cumple la propiedad asociativa: (AB)C = A(BC)
 
----
+✅ Conclusión General
 
-### 🔗 Ejercicio 3: Multiplicación en cadena
+Se aplicaron los conceptos fundamentales de clasificación, operaciones y propiedades de matrices, verificando la correcta aplicación de las leyes algebraicas.
+El formato Markdown utilizado es completamente compatible con GitHub, permitiendo una presentación clara y ordenada.
 
-**Enunciado del problema:**  
-Verificar que \((AB)C = A(BC)\) con las matrices:
-
-\[
-A = \begin{pmatrix}1 & 2 \\ 3 & 4\end{pmatrix}, \quad
-B = \begin{pmatrix}2 & 0 \\ 1 & 3\end{pmatrix}, \quad
-C = \begin{pmatrix}1 & 1 \\ 0 & 2\end{pmatrix}
-\]
-
----
-
-**Procedimiento paso a paso:**
-
-1. **Calcular AB:**
-
-\[
-AB = 
-\begin{pmatrix}
-1(2) + 2(1) & 1(0) + 2(3) \\
-3(2) + 4(1) & 3(0) + 4(3)
-\end{pmatrix} =
-\begin{pmatrix}
-4 & 6 \\ 10 & 12
-\end{pmatrix}
-\]
-
-2. **Calcular (AB)C:**
-
-\[
-(AB)C =
-\begin{pmatrix}
-4 & 6 \\ 10 & 12
-\end{pmatrix}
-\begin{pmatrix}
-1 & 1 \\ 0 & 2
-\end{pmatrix} =
-\begin{pmatrix}
-4(1)+6(0) & 4(1)+6(2) \\
-10(1)+12(0) & 10(1)+12(2)
-\end{pmatrix} =
-\begin{pmatrix}
-4 & 16 \\ 10 & 34
-\end{pmatrix}
-\]
-
-3. **Calcular BC:**
-
-\[
-BC =
-\begin{pmatrix}
-2 & 0 \\ 1 & 3
-\end{pmatrix}
-\begin{pmatrix}
-1 & 1 \\ 0 & 2
-\end{pmatrix} =
-\begin{pmatrix}
-2(1)+0(0) & 2(1)+0(2) \\
-1(1)+3(0) & 1(1)+3(2)
-\end{pmatrix} =
-\begin{pmatrix}
-2 & 2 \\ 1 & 7
-\end{pmatrix}
-\]
-
-4. **Calcular A(BC):**
-
-\[
-A(BC) =
-\begin{pmatrix}
-1 & 2 \\ 3 & 4
-\end{pmatrix}
-\begin{pmatrix}
-2 & 2 \\ 1 & 7
-\end{pmatrix} =
-\begin{pmatrix}
-1(2)+2(1) & 1(2)+2(7) \\
-3(2)+4(1) & 3(2)+4(7)
-\end{pmatrix} =
-\begin{pmatrix}
-4 & 16 \\ 10 & 34
-\end{pmatrix}
-\]
-
-**Conclusión:**  
-\[
-(AB)C = A(BC)
-\]
-✔ Se cumple la **propiedad asociativa** de la multiplicación de matrices.
-
----
-
-## ✅ Conclusión General
-
-En estos ejercicios se aplicaron los conceptos fundamentales de **clasificación, operaciones y propiedades de las matrices**, verificando que las operaciones cumplen las leyes algebraicas esperadas.  
-El uso del formato **Markdown** permitió organizar de forma clara los procedimientos, resultados y fórmulas matemáticas, mejorando la presentación técnica de los cálculos.
-
----
-
-**Autor:** Gael Magaña Chan  
-**Materia:** Álgebra Lineal
+Autor: Gael Magaña Chan
